@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Sofia+Sans&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    margin-top: -4px;
+    list-style: none;
+    font-family: 'Sofia Sans', sans-serif;
+}
+
+
+/*  index hearder    */
+
+
+.navbar .navme{
+    height: 80px;
+    width: 100%;
+    background:#E2D1F9;
+}
+
+.navbar .navme img {
+        width: 65px;
+        border:20px #317773;
+        border-radius: 10px;
+        margin-left: 20px;
+        padding-top: 9px;
+
+
+}
+.navbar .navme .navmenu {
+    float: right;
+    margin-right: 25px;
+    
+}
+.navbar .navme .navmenu li{
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 15px;
+}
+.navbar .navme .navmenu li a{
+    position: relative;
+    color:#317773;
+    font-size: 18px;
+    padding: 8px 0;
+    margin-inline: 15px;
+    text-transform: capitalize;
+    font-weight: bold;
+    text-decoration: none;
+}
+.navbar .navme .navmenu li a:before{
+    position: absolute;
+    content: '';
+    left: 0;
+    bottom: 0;
+    height: 3px;
+    width: 100%;
+    background:#317773;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition:.3s linear;
+}
+.navbar .navme .navmenu li a:hover:before{
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;  
+  }
+
+.navbar .navme .fa{
+    display: none;
+}
+
+
+/*   media query     */
+
+@media(max-width:1250px){
+    .navbar .navme .navmenu li a{
+        font-size: 17px;
+    }
+    .navbar .navme .navmenu li{
+        display: block;
+    }
+    .navbar .navme .navmenu {
+        position: absolute;
+        background:#E2D1F9;
+        height: 100vh;
+        width: 230px;
+        top: 0;
+        right: -21px;
+        text-align: left;
+        z-index: 3;
+        padding: 20px;
+        padding-top: 68px;
+        transition: 0.7s;
+
+    }
+    
+    .navbar .navme .fa{
+        display:block;
+        color: #317773;
+        font-size: 40px;
+        margin-top: -38px;
+        text-align: right;
+        margin-right:  20px; 
+        cursor: pointer;
+
+    }
+    
+}
